@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "335037424788",
+    "project_id": "chatgptcheckextension",
+    "storage_bucket": "chatgptcheckextension.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335037424788:android:863f54a2ff6de6042d8081",
+        "android_client_info": {
+          "package_name": "com.example.chatgpt_check_extension"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4QiWmLTJbbZFrquzr0xCWTFBTOYnolKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

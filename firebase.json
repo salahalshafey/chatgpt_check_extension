@@ -1,0 +1,31 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "chatgptcheckextension",
+          "appId": "1:335037424788:android:863f54a2ff6de6042d8081",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "chatgptcheckextension",
+          "configurations": {
+            "android": "1:335037424788:android:863f54a2ff6de6042d8081",
+            "web": "1:335037424788:web:cd66914e43194cb22d8081",
+            "windows": "1:335037424788:web:b0bfa0d992879ec82d8081"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
