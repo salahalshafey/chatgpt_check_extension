@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../utils/date_time_and_duration.dart';
 import 'last_occupied_user_image.dart';
@@ -34,13 +35,26 @@ class CurrentChatGptState extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Container(
-          padding: const EdgeInsets.all(7),
-          decoration: BoxDecoration(
-            color: color,
-            shape: BoxShape.circle,
-          ),
-          child: LastOccupiedUserImage(lastOccupiedUserId: lastOccupiedUserId),
+        Column(
+          children: [
+            if (switchState)
+              IconButton(
+                onPressed: () {
+                  launchUrl(Uri.parse("https://chatgpt4mena.com/"));
+                },
+                tooltip: "Open ChatGPT4MENA Website",
+                icon: const Icon(Icons.link),
+              ),
+            Container(
+              padding: const EdgeInsets.all(7),
+              decoration: BoxDecoration(
+                color: color,
+                shape: BoxShape.circle,
+              ),
+              child:
+                  LastOccupiedUserImage(lastOccupiedUserId: lastOccupiedUserId),
+            ),
+          ],
         ),
         MySwitch(
           switchState: switchState,

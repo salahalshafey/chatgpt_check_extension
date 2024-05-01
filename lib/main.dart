@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark().copyWith(
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       home: const HomePage(),
     );
   }

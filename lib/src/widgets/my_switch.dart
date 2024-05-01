@@ -33,7 +33,7 @@ class _MySwitchState extends State<MySwitch> {
 
   String _getToolTipMessage() {
     if (widget.switchState == false) {
-      return "Wait For ${widget.lastOccupiedUserName.toUpperCase()} To Finish";
+      return "Wait for ${widget.lastOccupiedUserName} to finish";
     }
 
     if (widget.color == Colors.green) {

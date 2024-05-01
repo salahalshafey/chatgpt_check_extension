@@ -29,6 +29,9 @@ class _UserNameFieldState extends State<UserNameField> {
       setState(() {
         _isEditing = true;
       });
+
+      _controller.selection =
+          TextSelection(baseOffset: 0, extentOffset: _controller.text.length);
     }
   }
 
@@ -39,10 +42,12 @@ class _UserNameFieldState extends State<UserNameField> {
       children: [
         _isEditing
             ? SizedBox(
-                width: 100,
+                width: 110,
                 height: 30,
                 child: TextField(
                   controller: _controller,
+                  autofocus: true,
+                  onEditingComplete: _toggelNameEditing,
                   decoration: const InputDecoration(hintText: "Your Name"),
                 ),
               )
