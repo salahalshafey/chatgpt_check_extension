@@ -25,9 +25,7 @@ deploy-web:
 	flutter build web --base-href $(BASE_HREF) --release
 
 	@echo "<<<<<<<<<<<<<<<        Deploying flutter app to git repository       >>>>>>>>>>>>>>>>>>"
-	git add . && \
-	git commit -m "Deploy Version $(BUILD_VERSION)" && \
-	git push origin main
+	Make_deploying_flutter_app_to_git_repository.cmd
 
 	@echo "<<<<<<<<<<<<<<<        copy the build/web to web app destination       >>>>>>>>>>>>>>>>>>"
 	robocopy $(BUILD_SOURCE) $(WEB_APP_DESTINATION) /E /IS
